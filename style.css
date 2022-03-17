@@ -66,6 +66,34 @@ ul {
   gap: 2rem;
 }
 
+.bc {
+  gap: 0.25rem;
+}
+
+/* projects */
+
+.projectsMain {
+  position: relative;
+}
+.hero-mockup {
+  max-width: 65%;
+  height: auto;
+  position: absolute;
+  top: 5vw;
+  right: 0;
+}
+
+/* fonts */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.black-bg {
+  background-color: black;
+  color: white;
+}
+
 /* mobile */
 @media only screen and (max-width: 600px) {
   .dMenu {
