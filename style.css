@@ -125,9 +125,23 @@ ul {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
 }
+/* main */
+#greeting {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* about */
-#about p {
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#about p,
+#conclusion p {
   font-size: 1.95rem;
   max-width: 40ch;
   margin-left: auto;
@@ -135,8 +149,10 @@ ul {
 }
 
 #projects {
-  margin: 15vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
 }
+
 #projects h2 {
   font-size: 1.95rem;
 }
@@ -145,6 +161,15 @@ ul {
   font-size: 1.95rem;
   max-width: 40ch;
   margin: 0.5rem;
+}
+
+#conclusion {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /* projects */
 
@@ -215,6 +240,10 @@ section img {
   border: solid 3px black;
 }
 
+.no-border {
+  border: none !important;
+}
+
 .color-palette p {
   max-width: 60ch;
   margin-left: auto;
@@ -223,6 +252,24 @@ section img {
 
 .screenshots {
   margin-top: 6vw;
+}
+
+.res-images {
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 3vw;
+  justify-content: space-around;
+}
+
+.res-images img {
+  height: 100%;
+  width: 40%;
+}
+
+.res-images > :nth-child(2) {
+  width: 20%;
+  padding: 0 10%;
 }
 /* mobile */
 @media only screen and (max-width: 600px) {
