@@ -220,6 +220,10 @@ section img {
   margin-left: auto;
   margin-right: auto;
 }
+
+.screenshots {
+  margin-top: 6vw;
+}
 /* mobile */
 @media only screen and (max-width: 600px) {
   .dMenu {
