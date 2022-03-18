@@ -1,3 +1,43 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+p {
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+}
+
+main,
+section {
+  padding: 1vw 15vw;
+}
+
+/* font hierarchy */
+h1 {
+  font-size: 5.96rem;
+  margin: 0;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 2.41rem;
+  margin: 1rem;
+  font-weight: 400;
+}
+h4 {
+  font-size: 3.8rem;
+  margin: 1rem 0;
+}
+h1 {
+  font-size: 5.96rem;
+}
+
 /* burger menu settings */
 .menuItem {
   font-size: 1.75rem;
@@ -70,6 +110,42 @@ ul {
   gap: 0.25rem;
 }
 
+.prim-button {
+  border: solid 1px black;
+  background-color: black;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+.sec-button {
+  border: solid 1px black;
+  background: none;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+
+/* about */
+#about p {
+  font-size: 1.95rem;
+  max-width: 40ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#projects {
+  margin: 15vw;
+}
+#projects h2 {
+  font-size: 1.95rem;
+}
+
+#projects p {
+  font-size: 1.95rem;
+  max-width: 40ch;
+  margin: 0.5rem;
+}
 /* projects */
 
 .projectsMain {
@@ -83,10 +159,39 @@ ul {
   right: 0;
 }
 
+.projectsMain h4 {
+  font-size: 1.56rem;
+}
+
+.projectsMain p {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.project-body section {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3vw;
+}
+
 /* fonts */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3vw;
+  position: relative;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.hero img {
+  max-width: 100%;
 }
 
 .black-bg {
@@ -94,6 +199,27 @@ ul {
   color: white;
 }
 
+section h3 {
+  text-align: center;
+}
+section img {
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.color-palette img {
+  border: solid 3px black;
+}
+
+.color-palette p {
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* mobile */
 @media only screen and (max-width: 600px) {
   .dMenu {
