@@ -4,6 +4,13 @@
   --color-accent: #4484fb;
 }
 
+.dark-mode {
+  --color-light: #141414;
+  --color-lighter: #133144;
+  --color-dark: #f7f8f9;
+  --color-accent: #4484fb;
+}
+
 /* Resetter */
 * {
   margin: 0px;
@@ -112,10 +119,21 @@ nav {
   z-index: 1;
 }
 
+.logo {
+  font-size: 2rem !important;
+  font-weight: 700;
+}
+
+.btn span {
+  color: var(--color-accent);
+  font-size: 2.5rem;
+}
+
 ul {
   display: flex;
   list-style-type: none;
   gap: 2rem;
+  align-items: center;
 }
 
 nav li {
@@ -125,6 +143,10 @@ nav li {
 a {
   color: #3a5d74;
   text-decoration: none;
+}
+
+.dark-mode a {
+  color: #cbced1;
 }
 a:hover {
   color: var(--color-dark);
@@ -312,6 +334,11 @@ nav li:hover::after {
   box-shadow: -5px 5px 14px -6px rgba(82, 82, 82, 0.3);
 }
 
+.dark-mode .prev-proj,
+.dark-mode .next-proj {
+  color: var(--color-dark) !important;
+}
+
 .proj-card {
   display: grid;
   grid-template-columns: 1fr 1.75fr;
@@ -353,6 +380,10 @@ nav li:hover::after {
   color: var(--color-light);
 }
 
+.dark-mode .black-bg {
+  color: var(--color-dark);
+}
+
 section h3 {
   text-align: center;
 }
@@ -370,8 +401,22 @@ section img {
   padding-top: 0vw !important;
 }
 
+.darkCard {
+  display: none;
+}
+.dark-mode .lightCard {
+  display: none;
+}
+.dark-mode .darkCard {
+  display: block;
+}
+
 .shadow {
   box-shadow: -5px 5px 14px -6px rgba(200, 200, 200);
+}
+
+.dark-mode .shadow {
+  box-shadow: -5px 5px 14px -6px rgb(82, 82, 82);
 }
 
 .color-palette p {
