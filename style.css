@@ -1,3 +1,9 @@
+:root {
+  --color-light: #f7f8f9;
+  --color-dark: #133144;
+  --color-accent: #4484fb;
+}
+
 /* Resetter */
 * {
   margin: 0px;
@@ -6,6 +12,8 @@
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 p {
   font-family: "Ubuntu", sans-serif;
@@ -14,7 +22,7 @@ p {
 
 main,
 section {
-  padding: 1vw 15vw;
+  padding: 1vw 10vw;
 }
 
 /* font hierarchy */
@@ -39,35 +47,33 @@ h1 {
 }
 
 /* burger menu settings */
-.menuItem {
-  font-size: 1.75rem;
-  text-decoration: none;
-  color: var(--color-secondary1);
-}
 
 .menu li {
-  padding-bottom: 1rem;
-  border-bottom: solid 1px var(--color-primary2);
+  padding-bottom: 2.1rem;
+  border-bottom: solid 1px #1d4258;
   padding-left: 3rem;
+}
+
+.menu a {
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: var(--color-light);
 }
 
 .hamburger {
   position: fixed;
   z-index: 100;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 1rem;
   border: none;
   background-color: var(--color-primary1);
   display: none;
 }
 
 .closeIcon {
-  font-size: 2rem !important;
   display: none;
-}
-.menuIcon {
-  font-size: 2rem !important;
+  color: var(--color-light);
 }
 
 .menu {
@@ -79,8 +85,8 @@ h1 {
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: black;
-  color: white;
+  background: var(--color-dark);
+  color: var(--color-light);
   list-style: none;
   padding-top: 4rem;
   display: flex;
@@ -98,7 +104,7 @@ nav {
   justify-content: space-between;
   padding: 1rem 5vw;
   align-items: center;
-  background-color: white;
+  background-color: var(--color-light);
   position: sticky;
   top: 0vh;
   z-index: 1;
@@ -115,16 +121,16 @@ nav li {
 }
 
 a {
-  color: rgb(83, 83, 83);
+  color: #3a5d74;
   text-decoration: none;
 }
 a:hover {
-  color: black;
+  color: var(--color-dark);
 }
 
 nav li:hover::after {
   content: "";
-  background: black;
+  background: var(--color-dark);
   border-radius: 1rem;
   position: absolute;
   left: 50%;
@@ -133,10 +139,14 @@ nav li:hover::after {
   width: 0.5rem;
 }
 
+.active a {
+  color: var(--color-dark) !important;
+}
+
 .active::after,
 .active:hover::after {
   content: "";
-  background: black;
+  background: var(--color-dark);
   border-radius: 1rem;
   position: absolute;
   left: 45%;
@@ -150,9 +160,9 @@ nav li:hover::after {
 }
 
 .prim-button {
-  border: solid 1px black;
-  background-color: black;
-  color: white;
+  border: solid 1px var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-light);
   font-family: "Source Sans Pro", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
@@ -160,15 +170,21 @@ nav li:hover::after {
 }
 
 .prim-button a {
-  color: white;
+  color: var(--color-light);
 }
 .sec-button {
-  border: solid 1px black;
+  display: block;
+  width: fit-content;
+  border: solid 1px var(--color-dark);
   background: none;
   font-family: "Source Sans Pro", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   margin-top: 3vw;
+}
+
+.sec-button {
+  color: var(--color-dark);
 }
 /* main */
 #greeting {
@@ -209,8 +225,8 @@ nav li:hover::after {
 }
 
 #conclusion {
-  background-color: black;
-  color: white;
+  background-color: var(--color-dark);
+  color: var(--color-light);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -252,29 +268,46 @@ nav li:hover::after {
 .prev-proj {
   position: fixed;
   z-index: 1;
+  width: 12vw;
+  text-align: center;
 
   bottom: 2vw;
   left: 3vw;
   background-color: rgb(78, 78, 78);
-  color: white !important;
+  color: var(--color-light) !important;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: -5px 5px 14px -6px rgba(200, 200, 200);
+  box-shadow: -5px 5px 14px -6px rgba(82, 82, 82, 0.3);
 }
 .next-proj {
   position: fixed;
   z-index: 1;
+  width: 12vw;
+  text-align: center;
   bottom: 2vw;
   right: 3vw;
-  background-color: rgb(78, 78, 78);
-  color: white !important;
+  background-color: #3a5d74;
+  color: var(--color-light) !important;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: -5px 5px 14px -6px rgba(200, 200, 200);
+  box-shadow: -5px 5px 14px -6px rgba(82, 82, 82, 0.3);
 }
 
 .proj-card {
-  margin-bottom: 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1.75fr;
+  gap: 3vw;
+  margin-top: 1rem;
+  margin-right: -10vw;
+  margin-bottom: 10vw;
+  position: relative;
+  justify-content: center;
+}
+
+.proj-card img {
+  z-index: -1;
+  /* filter: opacity(80%); */
+  position: relative;
 }
 
 /* fonts */
@@ -293,8 +326,8 @@ nav li:hover::after {
 }
 
 .black-bg {
-  background-color: black;
-  color: white;
+  background-color: #061824;
+  color: var(--color-light);
 }
 
 section h3 {
