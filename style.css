@@ -492,17 +492,17 @@ h3.goUp {
 }
 
 .goUp {
-  animation: goUp 0.75s ease-in-out 0.5s;
+  animation: goUp 0.75s ease-in-out;
 }
 .goUp2 {
-  animation: goUp2 1.25s ease-in-out 0.5s;
+  animation: goUp2 1.25s ease-in-out;
 }
 .goUp3 {
-  animation: goUp3 2.25s ease-in-out 0.5s;
+  animation: goUp3 2.25s ease-in-out;
 }
 
 .goDown {
-  animation: goDown 0.5s ease-in-out 0.5s;
+  animation: goDown 0.5s ease-in-out;
 }
 
 @keyframes goUp {
