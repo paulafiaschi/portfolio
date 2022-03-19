@@ -169,9 +169,14 @@ nav li:hover::after {
   margin-top: 3vw;
 }
 
-.prim-button a {
-  color: var(--color-light);
+.prim-button,
+.prim-button:hover {
+  color: var(--color-light) !important;
+  display: block;
+  margin-top: 3vh;
+  width: fit-content;
 }
+
 .sec-button {
   display: block;
   width: fit-content;
