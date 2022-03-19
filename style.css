@@ -79,7 +79,7 @@ h1 {
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: var(--color-primary1);
+  background: black;
   color: white;
   list-style: none;
   padding-top: 4rem;
@@ -96,14 +96,53 @@ h1 {
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 5vw;
+  padding: 1rem 5vw;
   align-items: center;
+  background-color: white;
+  position: sticky;
+  top: 0vh;
+  z-index: 1;
 }
 
 ul {
   display: flex;
   list-style-type: none;
   gap: 2rem;
+}
+
+nav li {
+  position: relative;
+}
+
+a {
+  color: rgb(83, 83, 83);
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+
+nav li:hover::after {
+  content: "";
+  background: black;
+  border-radius: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 3vh;
+  height: 5%;
+  width: 0.5rem;
+}
+
+.active::after,
+.active:hover::after {
+  content: "";
+  background: black;
+  border-radius: 1rem;
+  position: absolute;
+  left: 45%;
+  top: 3vh;
+  height: 5%;
+  width: 0.8rem;
 }
 
 .bc {
@@ -117,6 +156,11 @@ ul {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
+  margin-top: 3vw;
+}
+
+.prim-button a {
+  color: white;
 }
 .sec-button {
   border: solid 1px black;
@@ -124,6 +168,7 @@ ul {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
+  margin-top: 3vw;
 }
 /* main */
 #greeting {
@@ -204,6 +249,34 @@ ul {
   gap: 3vw;
 }
 
+.prev-proj {
+  position: fixed;
+  z-index: 1;
+
+  bottom: 2vw;
+  left: 3vw;
+  background-color: rgb(78, 78, 78);
+  color: white !important;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: -5px 5px 14px -6px rgba(200, 200, 200);
+}
+.next-proj {
+  position: fixed;
+  z-index: 1;
+  bottom: 2vw;
+  right: 3vw;
+  background-color: rgb(78, 78, 78);
+  color: white !important;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: -5px 5px 14px -6px rgba(200, 200, 200);
+}
+
+.proj-card {
+  margin-bottom: 5vw;
+}
+
 /* fonts */
 .hero {
   display: grid;
@@ -228,7 +301,8 @@ section h3 {
   text-align: center;
 }
 section img {
-  max-width: 600px;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -236,12 +310,12 @@ section img {
   margin-bottom: 2vw;
 }
 
-.color-palette img {
-  border: solid 3px black;
+.buttons-section {
+  padding-top: 0vw !important;
 }
 
-.no-border {
-  border: none !important;
+.shadow {
+  box-shadow: -5px 5px 14px -6px rgba(200, 200, 200);
 }
 
 .color-palette p {
@@ -273,6 +347,18 @@ section img {
 }
 /* mobile */
 @media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  h2 {
+    font-size: 3.8rem;
+  }
+  html {
+    font-size: 75%;
+  }
+  p {
+    font-size: 1rem;
+  }
   .dMenu {
     display: none;
   }
@@ -281,7 +367,28 @@ section img {
     display: block;
   }
 
+  main,
+  section {
+    padding: 1vw 7vw;
+  }
+
   .button2 {
     display: none;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  .two-col {
+    display: block;
+  }
+  img {
+    margin-top: 5vw !important;
+    margin-bottom: 5vw !important;
+  }
+
+  nav {
+    height: 4vh;
   }
 }
