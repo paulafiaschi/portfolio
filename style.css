@@ -173,8 +173,13 @@ nav li:hover::after {
   margin-top: 3vw;
 }
 
-.prim-button,
+.prim-button {
+  display: block;
+  margin-top: 3vh;
+  width: fit-content;
+}
 .prim-button:hover {
+  background-color: #1f5dcf;
   color: var(--color-light) !important;
   display: block;
   margin-top: 3vh;
@@ -191,6 +196,12 @@ nav li:hover::after {
   border-radius: 0.3rem;
   margin-top: 3vw;
   color: var(--color-accent);
+}
+
+.sec-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  animation-delay: 0.3s;
 }
 
 /* main */
@@ -223,6 +234,7 @@ nav li:hover::after {
 
 #projects h2 {
   font-size: 1.95rem;
+  color: #061824;
 }
 
 #projects p {
@@ -423,6 +435,7 @@ h3.goUp {
 @keyframes goUp {
   0% {
     transform: translateY(40vh);
+    opacity: 1;
   }
   100% {
     transform: translateY(0);
@@ -464,51 +477,16 @@ h3.goUp {
   margin-left: 0.5rem;
 }
 
+.icons i:hover {
+  color: var(--color-accent);
+}
+
 .icons i {
   background-color: var(--color-light);
   font-size: 1.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
-}
-
-.icons > :nth-child(3) {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.icons span {
-  display: none;
-}
-
-.icons .notice {
-  background-color: #3a5d74;
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  color: var(--color-light);
-  font-size: 0.75rem;
-  margin-left: 1vw;
-  width: fit-content !important;
-  position: absolute;
-  z-index: 99;
-  left: 3vw;
-  text-align: center;
-  display: none;
-}
-.icons .copied {
-  background-color: #3a5d74;
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  color: var(--color-light);
-  font-size: 0.75rem;
-  margin-left: 0.5;
-  width: 150% !important;
-  position: absolute;
-  left: 3vw;
-  display: none;
-}
-.icons > :nth-child(3):hover .notice {
-  display: inline;
 }
 
 /* mobile */
