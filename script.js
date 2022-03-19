@@ -1,8 +1,17 @@
+"use strict";
+
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
 const closeIcon = document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
+
+window.addEventListener("DOMContentLoaded", load);
+
+function load() {
+  console.log("start");
+  hamburger.addEventListener("click", toggleMenu);
+}
 
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
@@ -15,8 +24,6 @@ function toggleMenu() {
     menuIcon.style.display = "none";
   }
 }
-
-hamburger.addEventListener("click", toggleMenu);
 
 menuItems.forEach(function (menuItem) {
   menuItem.addEventListener("click", toggleMenu);
