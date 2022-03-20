@@ -45,6 +45,7 @@ h3 {
   font-size: 2.41rem;
   margin: 1rem;
   font-weight: 400;
+  margin-left: 0;
 }
 h4 {
   font-size: 3.8rem;
@@ -122,6 +123,10 @@ nav {
 .logo {
   font-size: 2rem !important;
   font-weight: 700;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .btn span {
@@ -228,12 +233,12 @@ nav li:hover::after {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   margin-top: 3vw;
-  color: var(--color-accent);
+  color: var(--color-accent) !important;
 }
 
 .sec-button:hover {
   background-color: var(--color-accent);
-  color: var(--color-light);
+  color: var(--color-light) !important;
   animation-delay: 0.3s;
 }
 
@@ -549,6 +554,7 @@ h3.goUp {
   z-index: 99;
   margin-left: 0.5rem;
   align-items: flex-start;
+  width: fit-content;
 }
 
 .icons i:hover {
