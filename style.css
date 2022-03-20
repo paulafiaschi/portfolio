@@ -1,5 +1,6 @@
 :root {
   --color-light: #f7f8f9;
+  --color-lighter: #d1d7dd;
   --color-dark: #133144;
   --color-accent: #4484fb;
 }
@@ -17,6 +18,11 @@
   padding: 0px;
   list-style: none;
 }
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: var(--color-light);
@@ -127,11 +133,17 @@ nav {
 
 .btn {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .btn span {
   color: var(--color-accent);
   font-size: 2.5rem;
+}
+
+.icon {
+  font-size: 1.25rem !important;
 }
 .btn:hover:after {
   background: none;
@@ -258,7 +270,8 @@ nav li:hover::after {
   justify-content: center;
 }
 #about p,
-#conclusion p {
+#conclusion p,
+.highlight p {
   font-size: 1.95rem;
   max-width: 40ch;
   margin-left: auto;
@@ -273,6 +286,7 @@ nav li:hover::after {
 #projects h2 {
   font-size: 1.95rem;
   color: #061824;
+  margin-top: 2vw;
 }
 
 .dark-mode #projects h2 {
@@ -293,6 +307,24 @@ nav li:hover::after {
   flex-direction: column;
   justify-content: center;
 }
+
+.highlight {
+  background-color: var(--color-lighter);
+  padding: 15vw 15vw;
+}
+
+.highlight p {
+  font-size: 1.5rem;
+}
+
+.highlight a {
+  color: #2e5db5;
+  text-decoration: underline;
+}
+.dark-mode .highlight a {
+  color: #a0bff8;
+}
+
 /* projects */
 
 .projectsMain {
