@@ -275,6 +275,11 @@ nav li:hover::after {
   flex-direction: column;
   justify-content: center;
   background-color: #252525;
+  color: var(--color-light);
+}
+
+.dark-mode #about {
+  color: var(--color-dark);
 }
 #about p,
 #conclusion p,
